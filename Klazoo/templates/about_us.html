@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+</head>
+<body>
+    <h1>About Us</h1>
+    <div>
+        {% for about in about_us %}
+            <h2>{{ about.title }}</h2>
+            <p>{{ about.content }}</p>
+            {% if about.image %}
+                <img src="{{ about.image.url }}" alt="{{ about.title }}">
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>
